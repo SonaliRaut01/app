@@ -29,6 +29,14 @@ stages:
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
     uiVeri5ExecuteTests: false
+
+  Compliance:
+    sonarExecuteScan: true 
+    serverUrl: "https://sonarcloud.io"                                                   
+    organization: "SonaliRaut01"                                 
+    projectKey: "sonaliraut01"                                  
+    sonarTokenCredentialsId: "sonar-token"
+
   Release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
@@ -37,6 +45,8 @@ stages:
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
     tmsUpload: false
+  
+
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
