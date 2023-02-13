@@ -44,7 +44,7 @@ stages:
     cfSpace: "dev"
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
-    tmsUpload: false
+    tmsUpload: true
   
 
 steps:
